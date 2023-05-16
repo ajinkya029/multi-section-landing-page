@@ -84,7 +84,7 @@ section {
 }
 
 .navbar__menu .menu__link:hover {
-  background: #333;
+  background: rgb(10, 161, 23);
   color: #fff;
   transition: ease 0.3s all;
 }
