@@ -59,23 +59,24 @@ navBuilder();
 // Add class 'active' to section when near top of viewport
 
 const sectionActivation = () => {
-  const currentY = window.pageYOffset;
-  const windowHeight = window.innerHeight;
-
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-
-    const isSectionInViewport =
-      sectionTop <= currentY + windowHeight * 0.5 &&
-      sectionTop + sectionHeight > currentY + windowHeight * 0.5;
+    const sectionTop = Math.floor(section.getBoundingClientRect().top);
+    const isSectionInViewport = sectionTop < 150 && sectionTop >= -150;
 
     if (isSectionInViewport) {
-      section.classList.add("your-active-class");
-      section.style.backgroundColor = "gray";
+      // Applying active class to the current section
+      section.classList.add("active");
+      // Applying active class to the current nav link
+      document
+        .querySelector(`a[href='#${section.id}']`)
+        .classList.add("active");
     } else {
-      section.classList.remove("your-active-class");
-      section.style.backgroundColor = "transparent";
+      // removing active class from the previous section
+      section.classList.remove("active");
+      // Removing active class from the previous nav link
+      document
+        .querySelector(`a[href='#${section.id}']`)
+        .classList.remove("active");
     }
   });
 };
