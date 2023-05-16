@@ -27,7 +27,7 @@ To enhance the user experience, the actively viewed section is visually differen
 
 To run this project locally, follow these steps:
 
-1. Clone the repository: `git clone [repository_url](https://github.com/ajinkya029/multi-section-landing-page.git)`
+1. Clone the repository: `git clone` [repository_url](https://github.com/ajinkya029/multi-section-landing-page.git)
 2. Navigate to the project directory: `cd multi-section-landing-page`
 3. Open the `index.html` file in your web browser.
 4. Interact with the landing page and observe the dynamically added content and navigation functionality.
